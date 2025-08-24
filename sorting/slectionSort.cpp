@@ -1,46 +1,25 @@
 #include <iostream>
 using namespace std;
 
-void seelectioSort(int arr[], int n)
-
-{
-    for (int i = 0; i < n - 2; i++)
-    {
+void selectionSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {   // outer loop runs n-1 times
         int mini = i;
-        for (int j = i; j < n - 1; j++)
-        {
-            if (arr[j] < arr[mini])
-            {
-                cout << "before mini:" << arr[mini] << ",  j :" << arr[j] << endl;
+        for (int j = i + 1; j < n; j++) { // find smallest in remaining array
+            if (arr[j] < arr[mini]) {
                 mini = j;
-                cout << "after mini:" << arr[mini] << ",   j :" << arr[j] << endl;
             }
         }
-        cout << "before mini:" << arr[mini] << ",  i :" << arr[i] << endl;
-
-        int temp = arr[mini];
-        arr[mini] = arr[i];
-        arr[i] = temp;
-        cout << "before mini:" << arr[mini] << ",  i :" << arr[i] << endl;
+        swap(arr[i], arr[mini]);  // swap with the smallest found
     }
 }
 
-int main()
-{
+int main() {
     int arr[5] = {30, 40, 20, 50, 10};
     int n = 5;
 
+    selectionSort(arr, n);
 
-    seelectioSort(arr, n);
-
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
 }
-
-
-
-
-
-
