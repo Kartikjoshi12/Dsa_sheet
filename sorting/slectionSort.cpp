@@ -2,6 +2,7 @@
 using namespace std;
 
 void seelectioSort(int arr[], int n)
+
 {
     for (int i = 0; i < n - 2; i++)
     {
@@ -23,10 +24,13 @@ void seelectioSort(int arr[], int n)
         cout << "before mini:" << arr[mini] << ",  i :" << arr[i] << endl;
     }
 }
+
 int main()
 {
     int arr[5] = {30, 40, 20, 50, 10};
     int n = 5;
+
+
     seelectioSort(arr, n);
 
     for (int i = 0; i < n; i++)
@@ -34,3 +38,9 @@ int main()
         cout << arr[i] << " ";
     }
 }
+
+
+
+
+
+
