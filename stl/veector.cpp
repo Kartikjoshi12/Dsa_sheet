@@ -54,15 +54,17 @@ cout<< it<<" ";
 cout<<endl;
 // erase method in vector
 
-arr1.erase(arr1.begin()+2);
+arr1.erase(arr1.begin()+2); // remove at start plus 2 that  is 3 
  for(auto it : arr1){
 cout<< it<<" ";
  }
   cout<<endl;
-arr1.erase(arr1.end()-1);
+
+arr1.erase(arr1.end()-1);  // remove at end 
 for(auto it : arr1){
 cout<< it<<" ";
  }
  cout<<endl;
+
     return 0;
 }
