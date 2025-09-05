@@ -13,7 +13,7 @@ string appendAndDeleteBrute(string s, string t, int k) {
             int ops = del + (int)t.size() - (n - del);
             if (ops == k) return "Yes";
         }
-    }
+    } 
     return "No";
 }
 
